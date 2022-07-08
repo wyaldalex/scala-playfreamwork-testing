@@ -8,6 +8,7 @@ GET     /                           controllers.HomeController.index()
 # New api controller mappings
 # WARNING forward slashes make routing fail WARNING
 GET     /api/todos                  controllers.api.TodoController.getAll()
+GET /api/todos/getById/:id         controllers.api.TodoController.getByIdRandom(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
